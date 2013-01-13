@@ -6,7 +6,7 @@
   #define bitdepthKnob 5
   #define stutterButton 9
   #define retrigButton 8
-  #define interfaceSamplerate 1024
+  #define interfaceSamplerate 512
   
   void updateInterface();
   short getKnob();
