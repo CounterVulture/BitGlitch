@@ -1,6 +1,6 @@
 #ifndef INTERFACE_H
 #define INTERFACE_H
-  
+  //IMPORT THIS INTO ANALOGPINS
   #define ledPin 13
   #define samplerateKnob 4
   #define bitdepthKnob 5

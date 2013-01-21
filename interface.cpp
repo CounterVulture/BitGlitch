@@ -1,6 +1,7 @@
 #include "interface.h"
 #include "Arduino.h"
 
+//IMPORT THIS INTO ANALOGPINS
 int interfaceClock;
 short samplerate;
 short bitdepth;
