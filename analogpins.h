@@ -1,8 +1,12 @@
 #ifndef ANALOGPINS_H
 #define ANALOGPINS_H
 
-  #define inputPin 0
+#include <avr/pgmspace.h>
+
+#define inputPin 0
+#define speakerPin 11
   
-  uint16_t adc_read(uint8_t ch);
-  void setupanalogIO();
+uint8_t adc_read(uint8_t ch);
+void setupanalogIO();
+
 #endif

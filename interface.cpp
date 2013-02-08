@@ -1,16 +1,16 @@
 #include "interface.h"
-#include "Arduino.h"
+#include "analogpins.h"
+#include <avr/io.h>
 
-//IMPORT THIS INTO ANALOGPINS
+
+//IMPORT THIS INTO ANALOGPINS?
 int interfaceClock;
 short samplerate;
 short bitdepth;
 
-bool buttonState = 0;
-bool retrigState = 0;
 
 void updateInterface() {
-    samplerate = analogRead(samplerateKnob);
+    samplerate = adc_read(samplerateKnob);
     samplerate = samplerate >> 7;
     interfaceClock = 0;
     interfaceClock++;
@@ -19,23 +19,8 @@ void updateInterface() {
 short getKnob() {
   return samplerate;
 }
+
 short getbitdepth() {
   return bitdepth;
 }
-bool getbuttonState() {
-  return buttonState;
-}
 
-bool getretrigState() {
- return retrigState;
-}
-
-void setbuttonState(bool state) {
-  buttonState=state;
-  return;
-}
-
-void setretrigState(bool state) {
-  retrigState=state;
-  return;
-}
